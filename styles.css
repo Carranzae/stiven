@@ -1,0 +1,145 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 60px; /* Cambiado para hacer el logo más pequeño */
+    height: 60px;
+    object-fit: cover;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.banner {
+    position: relative;
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.zFhk57MJIJtL2rxuvEZHCAHaE8&pid=Api&P=0&h=180');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    animation: fadeInDown 2s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-grid .product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-grid .product-item:hover {
+    transform: translateY(-10px);
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chatbotBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+}
+
+.chatbox {
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox .messages {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.bot-message {
+    text-align: left;
+}
+
+.bot-typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bot-typing .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1s infinite both;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 2rem;
+    }
+}
